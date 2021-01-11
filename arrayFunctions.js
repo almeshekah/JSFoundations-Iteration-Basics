@@ -33,7 +33,13 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
-  let Evens=[];
+  numbers.filter(function(number){
+    return number % 3 ===0 ;
+
+  });
+
+  
+  /*let Evens=[];
   for (const number of numbers){
     if(number % 2 ==0)
       Evens.push(number);
@@ -41,7 +47,7 @@ function getEvens(numbers) {
     }
     console.log(Evens);
   return Evens;
-
+*/
 }
 
 /**
@@ -55,12 +61,18 @@ function getEvens(numbers) {
  */
 function countOccurences(x, numbers) {
   // Your code here
-  let cont=0 ;
+  numbers.filter(function(number){
+    return number % 3 ===0 ;
+
+  });
+  
+  /*let cont=0 ;
   numbers.forEach(function (number){
     if (number==x)cont++
   });
  //console.log(cont);
 return cont;
+*/
 }
 
 /**
@@ -74,14 +86,22 @@ return cont;
 
 function makeThemDoctors(students) {
   // Your code here
-  let Doctors = [];
+  students.map(function( student){
+    return student.push('Dr. '+ student)
+
+  });
+
+
+
+
+  /*let Doctors = [];
   
      
     students.forEach(function (student){
       Doctors.push('Dr. '+ student)
     });
   
-  return Doctors;
+  return Doctors; */
 }
 
 module.exports = { getOdds, getEvens, countOccurences, makeThemDoctors };
