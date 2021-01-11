@@ -8,19 +8,17 @@
  * getOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]) -> [1, 3, 5, 7, 9]
  * getOdds([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> [11, 35, 601, 777, 999]
  */
-function getOdds(numbers) {
-  // Your code here
- // let Odds =[];
-  /*for (const number of numbers){
-    if (number % 2 !==0){
-      Odds.push(number);
-
-    };
-  }
-  ////console.log(Odds);
-  return Odds;*/
+function getOdds(numbers){
+ // Your code here
+ let od = [];
+ for (const number of numbers){
+   if (number % 3 === 0){
+     od.push(number);
+   }
+ }
+ return od;
 }
-//getOdds([11, 35, 52, 14, 56, 601, 777, 888, 999]);
+
 
 
 /**
@@ -35,17 +33,15 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
-  //let Evens =[];
-  //for (const number of numbers){
-    //if (number % 2 ==0){
-      //Evens.push(number);
-
-    //};
+  let ev=[];
+  for (const number of numbers){
+    if (number % 2 ===0){
+      ev.push(number);
+    }
   }
-  ////console.log(Evens);
-  //return Evens;
-//}
-//getEvens([11, 35, 52, 14, 56, 601, 777, 888, 999]);
+  return ev;
+}
+
 /**
  * countOccurences(x, numbers):
  * - receives a number `x`, and an array of numbers called `numbers`
@@ -59,13 +55,13 @@ function countOccurences(x, numbers) {
   // Your code here
   let cont=0 ;
   numbers.forEach(function (number){
-    if (number==x)cont++;
-  })
+    if (number==x)cont++
+  });
  //console.log(cont);
 return cont;
 
 }
-countOccurences(52, [11, 35, 52, 14, 56, 601, 52, 777, 888, 999, 52]);
+//countOccurences(52, [11, 35, 52, 14, 56, 601, 52, 777, 888, 999, 52]);
 /**
  * makeThemDoctors(students):
  * - receives array `students`
@@ -76,17 +72,17 @@ countOccurences(52, [11, 35, 52, 14, 56, 601, 52, 777, 888, 999, 52]);
  */
 
 function makeThemDoctors(students) {
-  // Your code here
+ // // Your code here
   let Doctors = [];
   
      
     students.forEach(function (student){
-      Doctors.push('Dr. '+ student);
-    })
-    //console.log(Doctors);
+      Doctors.push('Dr. '+ student)
+    });
+  //console.log(Doctors);
   return Doctors;
 
 }
-//makeThemDoctors(["Ali", "Aseel", "Richard"])
+//makeThemDoctors(["Ali", "Aseel", "Richard"]);
 
 module.exports = { getOdds, getEvens, countOccurences, makeThemDoctors };
