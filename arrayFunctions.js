@@ -10,7 +10,18 @@
  */
 function getOdds(numbers) {
   // Your code here
+  let Odds =[];
+  for (const number of numbers){
+    if (number % 2 !==0){
+      Odds.push(number);
+
+    };
+  }
+ // console.log(Odds);
+  return Odds;
 }
+//getOdds([11, 35, 52, 14, 56, 601, 777, 888, 999]);
+
 
 /**
  * getEvens(numbers):
@@ -24,8 +35,17 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
-}
+  let Evens =[];
+  for (const number of numbers){
+    if (number % 2 ==0){
+      Evens.push(number);
 
+    };
+  }
+ // console.log(Evens);
+  return Evens;
+}
+//getEvens([11, 35, 52, 14, 56, 601, 777, 888, 999]);
 /**
  * countOccurences(x, numbers):
  * - receives a number `x`, and an array of numbers called `numbers`
@@ -37,8 +57,15 @@ function getEvens(numbers) {
  */
 function countOccurences(x, numbers) {
   // Your code here
-}
+  cont =0 ;
+  numbers .forEach(function (number){
+    if (number==x)cont++;
+  })
+ // console.log(cont);
+return cont;
 
+}
+//countOccurences(52, [11, 35, 52, 14, 56, 601, 52, 777, 888, 999, 52]);
 /**
  * makeThemDoctors(students):
  * - receives array `students`
@@ -50,6 +77,16 @@ function countOccurences(x, numbers) {
 
 function makeThemDoctors(students) {
   // Your code here
+  let Doctors = [];
+  
+     
+    students .forEach(function (student){
+      Doctors.push('Dr.'+ student);
+    })
+    console.log(Doctors);
+  return Doctors;
+
 }
+makeThemDoctors(["Ali", "Aseel", "Richard"])
 
 module.exports = { getOdds, getEvens, countOccurences, makeThemDoctors };
